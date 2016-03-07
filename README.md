@@ -1,2 +1,2 @@
 # SOCS
-Self-Organized Critiality Sonification
+Self-Organized Criticality Sonification
