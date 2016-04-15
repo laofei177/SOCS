@@ -1,0 +1,35 @@
+#N canvas 1014 22 638 458 10;
+#X obj 15 144 inlet value;
+#X obj 163 45 loadbang;
+#X obj 80 107 f \$1;
+#X obj 145 109 f \$2;
+#X obj 210 107 f \$3;
+#X obj 276 105 f \$4;
+#X obj 15 247 outlet;
+#X text 9 278 Converts value from range oldMax-oldMin to value in range
+newMax-newMin oldRange = oldMax-oldMin newRange = newMax-newMin newVal=(((oldValue-oldMin)*newRange)/oldRange)+newMin
+;
+#X text 86 124 oldMin;
+#X text 154 125 oldMax;
+#X text 218 124 newMin;
+#X text 284 122 newMax;
+#X obj 307 12 inlet newMax;
+#X obj 220 11 inlet newMin;
+#X obj 107 12 inlet oldMax;
+#X obj 18 12 inlet oldMin;
+#X obj 15 196 expr ((($f1 - $f2)*($f5-$f4))/($f3-$f2))+$f4;
+#X text 227 175;
+#X connect 0 0 16 0;
+#X connect 1 0 5 0;
+#X connect 1 0 4 0;
+#X connect 1 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 16 1;
+#X connect 3 0 16 2;
+#X connect 4 0 16 3;
+#X connect 5 0 16 4;
+#X connect 12 0 5 0;
+#X connect 13 0 4 0;
+#X connect 14 0 3 0;
+#X connect 15 0 2 0;
+#X connect 16 0 6 0;

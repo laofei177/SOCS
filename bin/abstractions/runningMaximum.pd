@@ -1,0 +1,35 @@
+#N canvas 919 353 450 300 10;
+#X obj 20 13 inlet;
+#X obj 21 72 t f f;
+#X obj 20 46 max 1e-21;
+#X floatatom 20 136 8 0 0 1 Largest - -;
+#X floatatom 20 117 8 0 0 1 Current - -;
+#X obj 234 22 t f b;
+#X obj 236 50 f;
+#X floatatom 235 74 8 0 0 0 - - -;
+#X obj 246 107 -;
+#X obj 250 141 < 0;
+#X floatatom 249 168 5 0 0 0 - - -;
+#X obj 145 126 bng 18 250 50 0 empty empty +ve -1 -7 0 10 -45076 -159808
+-4160;
+#X obj 165 126 bng 18 250 50 0 empty empty -ve -1 -7 0 10 -45076 -260097
+-258113;
+#X obj 240 214 sel 1;
+#X text 143 97 Change;
+#X connect 0 0 2 0;
+#X connect 0 0 4 0;
+#X connect 0 0 5 0;
+#X connect 0 0 8 0;
+#X connect 1 0 3 0;
+#X connect 1 1 2 1;
+#X connect 2 0 1 0;
+#X connect 5 0 6 1;
+#X connect 5 1 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 1;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 13 0;
+#X connect 13 0 11 0;
+#X connect 13 1 12 0;
+#X coords 0 -1 1 1 200 65 1 12 95;

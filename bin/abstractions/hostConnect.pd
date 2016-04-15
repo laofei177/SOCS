@@ -1,0 +1,29 @@
+#N canvas 227 674 450 300 10;
+#X declare -lib mrpeach;
+#X msg 20 78 connect localhost 1280;
+#X obj 20 109 tcpclient;
+#X obj 20 140 unpackOSC;
+#X msg 174 78 disconnect localhost 1280;
+#X obj 20 185 outlet;
+#X obj 20 35 bng 15 250 50 0 empty empty Connect 17 7 0 10 -261234
+-159808 -45076;
+#X obj 90 35 bng 15 250 50 0 empty empty Disconnect 17 7 0 10 -258113
+-1 -1;
+#X text 131 127 Network Host;
+#X obj 224 43 import mrpeach;
+#X obj 224 12 loadbang;
+#X obj 117 195 send pd;
+#X msg 116 165 dsp 0;
+#X msg 75 166 dsp 1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 1 0;
+#X connect 5 0 0 0;
+#X connect 5 0 12 0;
+#X connect 6 0 3 0;
+#X connect 6 0 11 0;
+#X connect 9 0 8 0;
+#X connect 11 0 10 0;
+#X connect 12 0 10 0;
+#X coords 0 -1 1 1 170 50 1 10 10;
